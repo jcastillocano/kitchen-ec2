@@ -484,11 +484,11 @@ module Kitchen
       # Returns the sudo command to use or empty string if sudo is not configured
       #
       def sudo_command
-        if instance.respond_to?(:provisioner)
-          instance.provisioner[:sudo] ? instance.provisioner[:sudo_command].to_s : ""
-        else
-          instance.provisioners[0][:sudo] ? instance.provisioners[0][:sudo_command].to_s : ""
-        end
+        if instance.respond_to?(:provisioner)
+          instance.provisioner[:sudo] ? instance.provisioner[:sudo_command].to_s : ""
+        else
+          instance.provisioners[0][:sudo] ? instance.provisioners[0][:sudo_command].to_s : ""
+        end
       end
 
       # rubocop:disable Metrics/MethodLength, Metrics/LineLength
